@@ -1,0 +1,190 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    body {
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        header {
+
+            nav {
+                .menu-btn {
+                    display: block;
+                }
+
+                .left-nav {
+                    position: fixed;
+                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
+                    z-index: 5;
+                    top: 0;
+                    left: 0;
+                    flex-direction: row;
+                    width: 100vw;
+                    height: 70px;
+                    padding-top: 0;
+                    padding-left: 35px;
+                    transform: translate3d(100vw, 0, 0);
+                    transition: 0.5s transform ease-out;
+
+                    a {
+                        padding: 15px;
+
+                        &:hover {
+                            background: rgba($dark-color, 0.05);
+                        }
+                    }
+
+                    &.show {
+                        transform: translate3d(0, 0, 0);
+                        transition: 0.5s transform ease-out;
+                    }
+                }
+
+                .right-nav {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
+                    flex-direction: row;
+                    width: 100vw;
+                    height: 70px;
+                    padding-bottom: 0;
+                    padding-right: 35px;
+                    justify-content: flex-end;
+                    z-index: 5;
+                    transform: translate3d(-100vw, 0, 0);
+                    transition: 0.5s all ease-out;
+
+                    a {
+                        padding: 15px;
+
+                        &:hover {
+                            background: rgba($dark-color, 0.05);
+                        }
+                    }
+                    &.show {
+                        transform: translate3d(0, 0, 0);
+                        transition: 0.5s all ease-out;
+                    }
+                }
+            }
+        }
+
+        main {
+
+            ///CSS for HEAD PAGE///
+            &.head {
+
+                &.main-height {
+                    overflow: scroll;
+                    height: 100%;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+
+                #top {
+
+                    .top-container {
+
+                        #logo {
+                            font-size: 10vw;
+                        }
+                    }
+                }
+
+                #select {
+
+                    .select {
+                        flex-direction: column;
+                        padding: 2vh 0 4vh;
+                        height: 100%;
+
+                        a {
+                            height: 25vh;
+                            margin: 5px 0;
+
+                            .sel-bg {
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            ///END of CSS for HEAD PAGE///
+
+            #top {
+                padding: 70px 0;
+            }
+
+            #contact {
+
+                .wraper {
+                    padding: 70px 0;
+
+                    .contact-info {
+                        //padding: 0;
+                        //display: flex;
+                        //align-items: center;
+                        //text-align: center;
+                        max-width: 30vh;
+                        //margin: auto;
+
+                        span {
+                            color: $bright-color;
+                        }
+
+                        p {
+                            font-weight: lighter;
+                        }
+
+                        h2 {
+                            font-size: 50px;
+                        }
+
+                        a {
+                            color: $bright-color;
+                            padding: 5px 7px;
+                            background: $dark-color;
+                            border-radius: 3px;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .mapouter {
+                        text-align: right;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        footer {
+            background: rgba($dark-color, 0.5);
+            font-size: 3vw;
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

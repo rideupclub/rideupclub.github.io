@@ -1,0 +1,449 @@
+
+@import 'config';
+@import 'menu';
+
+.BRIGHT {
+    border: 1px solid $bright-color;
+}
+
+.RED {
+    border: 1px solid red;
+}
+
+.GREEN {
+    border: 2px solid green;
+}
+
+.BLUE {
+    border: 1px solid blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', 'Ubuntu', 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: $dark-color;
+    background: green;
+    height: 100%;
+    min-height: 100vh;
+
+    svg {
+        path {
+            fill: $icon-color;
+        }
+    }
+
+    main {
+        min-height: calc(100vh - 4vh);
+        background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: $dark-color;
+        letter-spacing: 1px;
+
+        #top {
+            width: 100%;
+            height: 100vh;
+            padding: 70px;
+            margin: 0;
+
+            .top-section {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                margin: auto;
+
+                .section-info {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                    color: #fff;
+                    padding: 10px;
+                    text-align: center;
+                    background: rgba($dark-color, 0.7);
+
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+
+                    h2 {
+                        font-weight: bold;
+                        letter-spacing: 7px;
+                        color: $bright-color;
+                        font-size: 5vw;
+                    }
+
+                    p {
+                        letter-spacing: 2px;
+                        padding: 0 10%;
+                        margin: 0;
+                    }
+                }
+
+                .section-bg {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    .hold-image {
+                        margin: auto;
+                        position: absolute;
+                        min-height: 100%;
+                        min-width: 100%;
+
+                        &.camping-opacity-bg {
+                            opacity: 0.9;
+                        }
+
+                        &.fishing-opacity-bg {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wraper {
+            width: calc(100% - 140px);
+            margin: auto;
+
+            #price {
+                min-height: 100vh;
+                width: 100%;
+
+                .price-list {
+                    border-left: 2px solid $bright-color;
+                    margin: 30px 0;
+                    padding: 10px;
+                    max-width: 100%;
+                    overflow: hidden;
+
+                    h2 {
+
+                    }
+
+                    .table {
+                        margin: 30px 0;
+                    }
+                }
+
+                .more-info {
+                    text-align: justify;
+
+                    .waranty {
+                        font-weight: bold;
+                        background: rgba($dark-color, 0.7);
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 3px;
+                        margin: 50px 0;
+                        padding: 20px;
+                    }
+                }
+            }
+
+            #impo-info {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+
+                .center {
+                    margin: auto;
+
+                    h3 {
+                        text-align: center;
+                    }
+
+                    .book {
+                        margin: 50px auto;
+                    }
+
+                    .list {
+                        width: 70%;
+                        margin: auto;
+                        text-align: justify;
+
+                        div {
+                            margin: 30px auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        #contact {
+            min-height: calc(100vh - 4vh);
+            background: #fff;
+
+            .wraper {
+                width: 100%;
+                padding: 70px;
+                margin: auto;
+                min-height: calc(100vh - 4vh);
+
+
+                .contact-info {
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    max-width: 300px;
+                    margin: auto;
+
+                    span {
+                        color: $bright-color;
+                    }
+
+                    p {
+                        font-weight: lighter;
+                    }
+
+                    h2 {
+                        font-size: 50px;
+                    }
+
+                    a {
+                        color: $bright-color;
+                        padding: 5px 7px;
+                        background: $dark-color;
+                        border-radius: 3px;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .mapouter {
+                    text-align: right;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 100%;
+                }
+            }
+        }
+        ///CSS for HEAD PAGE///
+        #bg-img {
+            height: 100vh;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba($dark-color, 0.6);
+                z-index: 1;
+            }
+
+            img {
+                position: inherit;
+                min-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+        }
+
+        &.head {
+            height: calc(100vh - 4vh);
+            overflow: hidden;
+
+            #top {
+                height: 100vh;
+                z-index: 2;
+                transition: 1s all ease-out;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &.upMe {
+                    height: 40vh;
+                }
+
+                span {
+                    color: $bright-color;
+                }
+
+                .top-container {
+
+                    #logo {
+                        border: 3px solid #fff;
+                        border-radius: 5px;
+                        font-size: 80px;
+                        letter-spacing: 1vw;
+
+                        h1 {
+                            box-sizing: border-box;
+                            font-size: 1em;
+                            letter-spacing: 0.05em;
+                            color: #fff;
+                            line-height: 1;
+                        }
+
+                        p {
+                            color: #fff;
+                            font-size: 0.2em;
+                            letter-spacing: 1em;
+                            line-height: 1;
+                        }
+                    }
+
+                    .icons {
+                        margin-top: 1vh;
+
+                        a {
+                            color: #fff;
+                            margin: 0 1vw;
+                            transition: 0.5s color ease-out;
+
+                            &:hover {
+                                color: $bright-color;
+                                transition: 0.5s color ease-out;
+                            }
+                        }
+                    }
+                }
+
+                h5 {
+                    bottom: 3vh;
+                    font-size: 2.5vh;
+                }
+            }
+
+            #select {
+                z-index: 2;
+                //background: rgba(255, 255, 255, 0.7);
+                .select {
+                    height: 56vh;
+
+                    a {
+                        text-decoration: none;
+                        height: 95%;
+                        margin: auto;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        color: #fff;
+                        border-radius: 3px;
+                        //overflow: hidden;
+                        border: 1px solid #fff;
+
+                        .sel-info {
+                            position: absolute;
+
+                            height: 100%;
+                            background: rgba($dark-color, 0.7);
+                            z-index: 3;
+                            opacity: 0.9;
+                            transition: 1s opacity ease-out;
+
+                            &:hover {
+                                opacity: 0;
+                                transition: 1s opacity ease-out;
+                            }
+
+                            h2 {
+                                font-weight: bold;
+                                letter-spacing: 7px;
+                                color: $bright-color;
+                                font-size: 5vw;
+                            }
+
+                            p {
+                                letter-spacing: 2px;
+                                padding: 0 10%;
+                            }
+                        }
+
+                        .sel-bg {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0;
+                            overflow: hidden;
+
+                            img {
+                                position: relative;
+                                top: 0;
+                                right: 0;
+
+                                /*&.skiing-image {
+                                    //transform: scale(0.8);
+                                    //display: none;
+                                }
+
+                                &.camping-image {
+                                    position: absolute;
+                                    transform: scale(0.8);
+                                    right: -300px;
+                                    top: -130px;
+                                    object-fit: cover;
+                                    display: none;
+                                }
+
+                                &.fishing-image {
+                                    position: absolute;
+                                    transform: scale(0.8);
+                                    right: -350px;
+                                    top: -250px;
+                                    //display: none;
+                                }*/
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ///END of CSS for HEAD PAGE///
+    }
+
+    footer {
+        height: 4vh;
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: lighter;
+        background: rgba($dark-color, 0.5);
+
+        &.head {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+
+        p {
+            padding: 0 15px;
+        }
+    }
+}
+
+@import 'mobile';
