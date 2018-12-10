@@ -3,78 +3,17 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     body {
-        overflow-x: hidden;
-
         &::-webkit-scrollbar {
             display: none;
         }
-        header {
 
-            nav {
-                .menu-btn {
-                    display: block;
-                }
-
-                .left-nav {
-                    position: fixed;
-                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
-                    z-index: 5;
-                    top: 0;
-                    left: 0;
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 70px;
-                    padding-top: 0;
-                    padding-left: 35px;
-                    transform: translate3d(100vw, 0, 0);
-                    transition: 0.5s transform ease-out;
-
-                    a {
-                        padding: 15px;
-
-                        &:hover {
-                            background: rgba($dark-color, 0.05);
-                        }
-                    }
-
-                    &.show {
-                        transform: translate3d(0, 0, 0);
-                        transition: 0.5s transform ease-out;
-                    }
-                }
-
-                .right-nav {
-                    position: fixed;
-                    bottom: 0;
-                    right: 0;
-                    background: linear-gradient(90.75deg,#faf4f0 0,#ebf1fc 100%);
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 70px;
-                    padding-bottom: 0;
-                    padding-right: 35px;
-                    justify-content: flex-end;
-                    z-index: 5;
-                    transform: translate3d(-100vw, 0, 0);
-                    transition: 0.5s all ease-out;
-
-                    a {
-                        padding: 15px;
-
-                        &:hover {
-                            background: rgba($dark-color, 0.05);
-                        }
-                    }
-                    &.show {
-                        transform: translate3d(0, 0, 0);
-                        transition: 0.5s all ease-out;
-                    }
-                }
-            }
+        //hide some text in mobile screen
+        .bla-bla {
+            display: none;
         }
 
         main {
-
+            
             ///CSS for HEAD PAGE///
             &.head {
 
@@ -87,26 +26,38 @@
                     }
                 }
 
-
                 #top {
 
                     .top-container {
-
                         #logo {
                             font-size: 10vw;
+                        }
+                    }
+
+                    &.upMe {
+                        height: 20vh;
+                        padding: 0;
+
+                        .icons {
+                            opacity: 0;
+                            transition: 1s opacity ease-out;
+                        }
+
+                        h5 {
+                            bottom: 0;
+                            font-size: 1.5vh;
+                            transition: 1s all ease-out;
                         }
                     }
                 }
 
                 #select {
-
                     .select {
                         flex-direction: column;
-                        padding: 2vh 0 4vh;
                         height: 100%;
 
                         a {
-                            height: 25vh;
+                            height: 22vh;
                             margin: 5px 0;
 
                             .sel-bg {
@@ -118,67 +69,129 @@
                     }
                 }
             }
-
             ///END of CSS for HEAD PAGE///
 
             #top {
-                padding: 70px 0;
+                padding: 0 0 70px 0;
             }
 
-            #contact {
+            #about {
+                padding: 10px;
 
-                .wraper {
-                    padding: 70px 0;
+                h1 {
+                    padding-bottom: 20px;
+                    padding-right: 20px;
+                    font-size: 50px;
+                }
 
-                    .contact-info {
-                        //padding: 0;
-                        //display: flex;
-                        //align-items: center;
-                        //text-align: center;
-                        max-width: 30vh;
-                        //margin: auto;
 
-                        span {
-                            color: $bright-color;
-                        }
+                .bio-content {
+                    display: block;
+                    padding: 0 30px;
 
-                        p {
-                            font-weight: lighter;
-                        }
+                    .bio-image {
+                        display: none;
+                    }
 
-                        h2 {
-                            font-size: 50px;
-                        }
+                    .bio {
+                        width: 100%;
+                    }
+                }
 
-                        a {
-                            color: $bright-color;
-                            padding: 5px 7px;
-                            background: $dark-color;
-                            border-radius: 3px;
+                .about-botom {
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
 
-                            &:hover {
-                                text-decoration: none;
-                                color: #fff;
+            #price {
+                width: 100%;
+                padding: 10px;
+
+                h1 {
+                    padding-bottom: 20px;
+                    padding-right: 20px;
+                    font-size: 50px;
+                }
+
+                .price-list {
+                    max-height: 90vh;
+                    position: relative;
+                    padding: 0;
+
+                    table {
+
+                        thead {
+
+                            tr {
+
+                                th {
+                                    min-width: 14vw;
+
+                                    &.sticky-header {
+                                        position: -webkit-sticky;
+                                        position: -moz-sticky;
+                                        position: -ms-sticky;
+                                        position: -o-sticky;
+                                        position: sticky;
+                                        top: 0;
+
+                                        &.naming {
+                                            min-width: 80vw;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
+                }
+            }
 
-                    .mapouter {
-                        text-align: right;
+            #categories {
+                padding: 10px;
+
+                h1 {
+                    text-align: right;
+                    font-size: 6vw;
+                }
+            }
+
+            .wraper {
+                width: 100%;
+                padding: 0 10px;
+
+                .more-info {
+                    padding: 0 20px;
+
+                    .waranty {
+                        margin: 50px 0;
+                        padding: 20px;
                     }
+                }
 
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 100%;
+                #impo-info {
+                    display: block;
+                    padding: 50px 0;
+
+                    .center {
+                        .list {
+                            width: 90%;
+                        }
                     }
                 }
             }
-        }
 
-        footer {
-            background: rgba($dark-color, 0.5);
-            font-size: 3vw;
+            #contact {
+                .wraper {
+                    padding: 10px;
+
+                    .contact-info {
+                        max-width: 30vh;
+                    }
+                }
+            }
         }
     }
 }
