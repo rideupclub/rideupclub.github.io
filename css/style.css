@@ -151,7 +151,7 @@ body {
   background: green;
   height: 100%;
   min-height: 100vh; }
-  body .smooth-scroll-center, body .smooth-scroll-center-2 {
+  body .smooth-scroll-center, body .smooth-scroll-center-contact {
     position: absolute;
     top: 0;
     left: 0;
@@ -564,6 +564,10 @@ body {
           overflow: hidden;
           background: none !important;
           height: 100%; }
+          body main #contact .wraper .gmap_canvas iframe {
+            width: 100%;
+            height: 100%;
+            border: none; }
   body footer {
     height: 4vh;
     color: #fff;

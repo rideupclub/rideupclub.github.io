@@ -36,7 +36,8 @@ body {
     height: 100%;
     min-height: 100vh;
 
-    .smooth-scroll-center, .smooth-scroll-center-2 {
+    //create div pointer for smooth scrolling to center the screen view
+    .smooth-scroll-center, .smooth-scroll-center-contact {
         position: absolute;
         top: 0;
         left: 0;
@@ -656,6 +657,12 @@ body {
                     overflow: hidden;
                     background: none !important;
                     height: 100%;
+
+                    iframe {
+                         width: 100%;
+                         height: 100%;
+                         border: none;
+                    }
                 }
             }
         }
